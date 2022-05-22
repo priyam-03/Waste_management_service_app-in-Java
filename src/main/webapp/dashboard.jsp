@@ -42,6 +42,7 @@
 <a href="logout"class="btn btn-outline-success" type="submit" >Log out</a>
 <input type="hidden" value="<% out.print(userid);%>" id="userid">
 <div id="res3"></div>
+<div id="res2"></div>
     <section id="Plans">
         <h1 class="plan-heading">OUR PLANS</h1>
         <div class="row">
@@ -92,7 +93,7 @@
 <script>
 
 function userDetails() {
-	var userid = document.getElementById("userid").value;
+	 var userid = document.getElementById("userid").value;
 	$.ajax({
 		url: "getoneuserdata",
 		method: "get",
@@ -115,6 +116,7 @@ function userDetails() {
 	            document.getElementById("res3").innerHTML = temp3;
 		    }
 		})
+		getcredit();
 }
 function Organic(){
 	window.location.href="Organic.jsp";
@@ -129,7 +131,23 @@ function Non_recylable(){
 function E_waste(){
 	window.location.href="E_waste.jsp";
 }
+function getcredit(){
+	var id =document.getElementById("userid").value; 
+		$.ajax({
+			url: "credit",
+			method: "post",
+			data: {"id":id},
+			success: function(response)
+			{			
+				console.log(response);
+				credit = parseInt(response);
+				document.getElementById("res2").innerHTML = "NOW YOUR CREDIT IS"+ credit;
+			}
+			})
 
+
+
+	}
 </script>
 </body>
 </html>

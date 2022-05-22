@@ -23,16 +23,25 @@ public class slot extends HttpServlet{
 		else {
 			String slot1 = req.getParameter("slot1");
 			String slot2= req.getParameter("slot2");
-			 slot = slot1+" & "+ slot2;
+			if(slot1==null&slot2==null) {
+			slot = null;	
+			}
+			else{
+				
+				 slot = slot1+" & "+ slot2;
+			}
+			
 		}
 		int id = Integer.parseInt(req.getParameter("id"));
 
 		
 		insert s = new insert();
+		if(slot!=null) {
+			s.setSubsname(subsname);
+			s.setSlot(slot);
+			s.setId(id);
+		}
 		
-		s.setSubsname(subsname);
-		s.setSlot(slot);
-		s.setId(id);
 	
 		PrintWriter out = resp.getWriter();
 		
@@ -48,7 +57,7 @@ public class slot extends HttpServlet{
 			{
 				out.println("Registration Failed");
 			}
-			 req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+		req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

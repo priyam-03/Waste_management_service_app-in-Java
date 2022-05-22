@@ -25,8 +25,8 @@
         <div class="login-box">
             <form class="form-class" action="insertcollector_collector_data" method="post">
                 <p><h3>Collector Log-in</h3></p>
-                <p><input class="finp" id="name" name="name" type="email" placeholder="Enter your email id"></p>
-                <p><input class="finp" id="email" name="email" type="text" placeholder="Enter the name"></p>
+                <p><input class="finp" id="name" name="name" type="text" placeholder="Enter your name"></p>
+                <p><input class="finp" id="email" name="email" type="email" placeholder="Enter the email id"></p>
                 <p><input class="finp" id="password" name="password" type="password" placeholder="Enter the password"></p>
                 
                 <input type="submit" class="btn btn-success" value="submit">

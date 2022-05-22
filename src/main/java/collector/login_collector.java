@@ -43,15 +43,17 @@ public class login_collector extends HttpServlet{
 		
 		  try {
 		  
-		  s1 = s.search_data_byname();
-		  System.out.println(s1);
-		 if(s1!=null) {
-			String name =  s1.getName();
-			System.out.println(name);
-			 out.print("Welcome, "+name);  
-	        HttpSession session=req.getSession();  
-	        session.setAttribute("name",name);  
-		 }
+			  s1 = s.search_data_byname();
+			  System.out.println(s1);
+			 if(s1!=null) {
+				String name =  s1.getName();
+				int id = s1.getId();
+				System.out.println(name);
+				 out.print("Welcome, "+name);  
+		        HttpSession session7=req.getSession();  
+		        session7.setAttribute("name",name);  
+		        session7.setAttribute("id", id);
+			 }
 		  
 		  Gson gson = new Gson();
 		  String jsonArray = gson.toJson(s1);

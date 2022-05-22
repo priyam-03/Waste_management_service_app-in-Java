@@ -53,9 +53,7 @@ if(userid>0){
 </div>
 
 
-<input type="submit" value="Submit">
 
-</form>
 <div class="CompanyName"><h3><b><a class="company-name" href="dashboard.jsp">GO TO DASHBOARD </a></b></h3></div>
 <div class="Contact">
         <h1>Contact</h1><br>

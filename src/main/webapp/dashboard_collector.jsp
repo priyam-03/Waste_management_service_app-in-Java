@@ -16,35 +16,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"></script>
-  <link rel="stylesheet" href="recyclable_waste_styles.css">
+  <link rel="stylesheet" href="organic_waste_booking_styles.css">
+  <script type="text/javascript">
+  window.history.forward();
+  function noBack() {
+      window.history.forward();
+  }
+    </script>
 </head>
 <body onload="showAlluser()">
 	<section id="CompanyName">
         <div>
-            <a class="company-name" href="INDEX.html">
-                <h1>CLEANVERSE</h1>
+            <a class="company-name" href="index.html">
+                <h1>HOME PAGE</h1>
             </a>
         </div>
     </section>
     <a href="collector_logout"class="btn btn-outline-success" type="submit" >Log out</a>
 <%
-	HttpSession session5=request.getSession(false);
-	if(session5!=null){  
-        String name=(String)session5.getAttribute("name");  
-          
-        out.print("Hello, "+name+" Welcome to Profile");  
-     System.out.println("Hello, "+name+" Welcome to Profile");
-        }  
-        else{  
-            out.print("Please login first");  
-            request.getRequestDispatcher("login.html").include(request, response);  
-        } 
+int userid=0;
+HttpSession session5=request.getSession(false);
+
+if(session5.getAttribute("name")!=null){  
+    String name=(String)session5.getAttribute("name");  
+      
+    out.print("Hello, "+name+" Welcome to Profile");  
+ System.out.println("Hello, "+name+" Welcome to Profile");
+  userid=(int)session5.getAttribute("id");
+    }  
+    else{  
+        out.print("Please login first");  
+        request.getRequestDispatcher("login_collector.html").forward(request, response);  
+    } 
 	
 	insert obj = new insert();
 	ArrayList<insert> allList = obj.getuserdata();
 	
 	
 	out.print("<select id='userid' onchange='getcredit()'>");
+	out.print("<option value='0'>"+"select any option"+"</option>");
 	for(int i=0; i<allList.size(); i++)
 	{
 		out.print("<option value="+allList.get(i).getId()+">"+allList.get(i).getEmail()+"</option>");
@@ -86,7 +96,7 @@ function showAlluser() {
 	            document.getElementById("res3").innerHTML = temp3;
 		    }
 		})
-		getcredit();
+		
 }
 var credit;
 var enteredcredit;
@@ -101,7 +111,7 @@ userid =document.getElementById("userid").value;
 		{			
 			console.log(response);
 			credit = parseInt(response);
-			document.getElementById("res3").innerHTML+="YOUR CREDIT"+credit;
+			
 		}
 		})
 
@@ -110,7 +120,7 @@ userid =document.getElementById("userid").value;
 }
 function changecredit(){
 	enteredcredit=document.getElementById("credit").value;
-	credit = parseInt(enteredcredit)+ credit;
+	credit = parseInt(enteredcredit)+ parseInt(credit);
 	console.log(userid);
 	console.log(credit);
 	

@@ -16,15 +16,17 @@ public class logout_collector extends HttpServlet {
                                 throws ServletException, IOException {  
             response.setContentType("text/html");  
             PrintWriter out=response.getWriter();  
+            HttpSession session4=request.getSession();  
               
+            response.setHeader("Pragma", "no-cache");
+            response.setHeader("Cache-Control", "no-store");
+            response.setHeader("Expires", "0");
+            response.setDateHeader("Expires", -1); 
             request.getRequestDispatcher("login_collector.html").forward(request, response);  
               
-            HttpSession session4=request.getSession();  
-            session4.invalidate();  
+            
               
-            out.print("You are successfully logged out!");  
-              
-            out.close();  
+            session4.invalidate();
     }  
 }  
 

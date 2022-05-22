@@ -37,6 +37,7 @@ public class signup_collector extends HttpServlet{
 			if(response == 1)
 			{
 				out.print("Registration Successfully");
+				req.getRequestDispatcher("login_collector.html").forward(req, resp);
 			}
 			else
 			{

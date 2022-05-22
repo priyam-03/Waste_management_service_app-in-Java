@@ -238,9 +238,9 @@ public class insert {
 		
 		
 		
-		ps.setInt(1,id);
+		ps.setInt(1,credit);
 		
-		ps.setInt(2,credit); 
+		ps.setInt(2,id); 
 		 
 		
 		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
