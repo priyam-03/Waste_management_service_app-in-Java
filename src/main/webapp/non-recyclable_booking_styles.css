@@ -1,0 +1,65 @@
+body{
+    background: url(IMAGES/NON-RECYCLABLE_BOOKING_FINAL\(1\).jpg);
+    color:white;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.CompanyName{
+    text-align: center;
+    padding-top: 40px;
+}
+.company-name{
+    color: white;
+    text-decoration: none;
+
+}
+.company-name:hover{
+    color: white;
+    
+}
+.header-text{
+    
+    padding:5% 15%;
+
+}
+.service-description{
+    padding: 4% 15%;
+}
+.sessions-header{
+    padding: 4% 15%;
+}
+
+.slots-table{
+    padding: 0% 2%;
+    padding-bottom: 2%;
+    border: 2px solid white;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.row{
+    margin: 40px;
+    border-bottom: 2px solid white;
+    padding:3%;
+    font-size: 1.25rem;
+}
+.IST{
+    padding: 0% 15%;
+}
+
+.Contact{
+    padding:7% 15%;
+
+}
+.Contact p{
+    font-size: 1.25rem;
+}
+
+#footer{
+    background-color: BLACK;
+    text-align: center;
+    padding:1% 15%;
+    color:white
+}
+.footer-icon{
+    margin:20px;
+}

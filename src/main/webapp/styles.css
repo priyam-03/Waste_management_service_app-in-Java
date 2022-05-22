@@ -1,0 +1,87 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    
+    background:url(IMAGES/BODY_IMAGE_FINAL.jpg);
+}
+
+.intro-cleanverse{
+    font-size: 3.5rem;
+}
+
+.intro{
+    padding: 4% 15%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+.intro-content{
+    padding-top: 3%;
+}
+.nav-item{
+    padding: 5px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+.navbar{
+    margin-left: 7%;
+}
+
+
+#About{
+    text-align: center;
+    padding: 7% 15%;
+    background-color: green;
+    color: white;
+    background: url(IMAGES/BODY_IMAGE_RESIZED.jpg);
+}
+.about-para{
+    font-size: 1.5rem;
+}
+
+#Plans{
+    padding: 7% 15%;
+    text-align: center;
+    background: url(IMAGES/PLANS_IMAGE.jpg);
+}
+.plan-heading{
+    color: white;
+    margin-bottom: 30px;
+}
+.card-header{
+    font-size: 1.5rem;
+}
+
+#Testimonials{
+    padding-top: 7%;
+    text-align: center;
+    color: white;
+    
+}
+.testimonial-text{
+    font-size: 1.5rem;
+}
+
+.carousel-inner{
+    padding:7% 15%;
+    
+    
+}
+
+#ContactUs{
+    background-color: white;
+    text-align: center;
+    padding: 7% 11%;
+}
+.contact-heading{
+    color:green
+}
+
+#footer{
+    background-color: BLACK;
+    text-align: center;
+    padding:1% 15%;
+    color:white
+}
+.footer-icon{
+    margin:20px;
+}

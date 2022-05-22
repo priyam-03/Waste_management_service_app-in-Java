@@ -1,0 +1,68 @@
+body{
+    background: url(IMAGES/BODY_IMAGE_FINAL.jpg);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+#Form{
+    padding: 7% 39%;
+    
+}
+form{
+    background-color: white;
+    
+}
+#CompanyName{
+    padding-top: 40px;
+}
+.company-name{
+    color: white;
+    text-decoration: none;
+    margin-top: 70px;
+}
+
+.company-name:hover{
+    color: grey;
+}
+
+h1{
+    color:white;
+}
+#footer{
+    background-color: BLACK;
+    text-align: center;
+    padding:1% 15%;
+    color:white
+}
+.footer-icon{
+    margin:20px;
+}
+
+.login-box{
+    padding: 2% 0%;
+    
+}
+.form-class{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 5px solid green;
+    border-radius: 20px;
+    
+}
+.finp{
+    border: 1px solid green;
+    border-radius: 10px;
+    padding: 10px;
+}
+.btn{
+    margin-top: 20px;
+}
+
+.button-link{
+    color: white;
+    text-decoration: none;
+}
+.button-link:hover{
+    color: white;
+    text-decoration: none;
+}
+
