@@ -32,7 +32,7 @@
 HttpSession session2=request.getSession(false);
 int userid=(int)session2.getAttribute("id");
 if(userid>0){  
- System.out.println("Hello, "+userid+" Welcome to Profile");
+ System.out.println("Hello, "+userid+" Welcome to your Profile");
     }  
     else{  
         out.print("Please login first");  
